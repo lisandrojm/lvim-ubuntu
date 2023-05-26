@@ -406,6 +406,7 @@ lvim.builtin.cmp.mapping = cmp.mapping.preset.insert({
 	["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 })
 
+-- debug javascript
 local dap = require("dap")
 dap.adapters.node2 = {
 	type = "executable",
@@ -413,7 +414,6 @@ dap.adapters.node2 = {
 	args = { os.getenv("HOME") .. "/vscode-node-debug2/out/src/nodeDebug.js" },
 }
 
--- debug javascript
 dap.configurations.javascript = {
 	{
 		name = "Launch",
